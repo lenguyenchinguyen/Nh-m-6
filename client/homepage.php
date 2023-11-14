@@ -9,10 +9,18 @@
 	                        <div class="col-lg-5 col-md-6">
 	                            <div class="banner-content">
 	                                <h1>Nike New <br>Collection!</h1>
+<<<<<<< HEAD
 	                                <p>Ở đây chúng tôi không chỉ có giày mà còn có sự tận tâm.</p>
 	                                <div class="add-bag d-flex align-items-center">
 	                                    <a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
 	                                    <span class="add-text text-uppercase">Mua ngay!</span>
+=======
+	                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+	                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+	                                <div class="add-bag d-flex align-items-center">
+	                                    <a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
+	                                    <span class="add-text text-uppercase">Add to Bag</span>
+>>>>>>> luongvhpc05477
 	                                </div>
 	                            </div>
 	                        </div>
@@ -174,7 +182,13 @@
 	                <div class="col-lg-6 text-center">
 	                    <div class="section-title">
 	                        <h1>Sản phẩm mới nhất</h1>
+<<<<<<< HEAD
 	                        <p>Tổng hợp các sản phẩm hot từ nhà sản xuất.</p>
+=======
+	                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+	                            dolore
+	                            magna aliqua.</p>
+>>>>>>> luongvhpc05477
 	                    </div>
 	                </div>
 	            </div>
@@ -810,7 +824,11 @@
 	<!-- Start related-product Area -->
 	<br>
 	<br>
+<<<<<<< HEAD
 	<!-- <section class="related-product-area section_gap_bottom">
+=======
+	<section class="related-product-area section_gap_bottom">
+>>>>>>> luongvhpc05477
 	    <div class="container">
 	        <div class="row justify-content-center">
 	            <div class="col-lg-6 text-center">
@@ -943,6 +961,10 @@
 	            </div>
 	        </div>
 	    </div>
+<<<<<<< HEAD
 	</section> -->
+=======
+	</section>
+>>>>>>> luongvhpc05477
 	<!-- End related-product Area -->
     
