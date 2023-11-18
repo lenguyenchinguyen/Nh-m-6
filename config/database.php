@@ -3,7 +3,7 @@
     $server = "localhost";
     $username = "root";
     $password = "mysql";
-    $database = "luongvhpc05477_asm_php1";
+    $database = "shop_sneaker";
     
     global $connection;
     
@@ -15,6 +15,7 @@ if(!$connection){
     echo "lỗi kết nối cơ sở dữ liệu!";
     die();
 }
+
 
 
 require_once 'modules/product.php';
