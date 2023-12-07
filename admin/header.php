@@ -28,13 +28,36 @@
     <li> <a href="index.php?act=add-product"><i class="fa-solid fas fa-archive ico-side"></i>Quản lí sản phẩm</a></li>
     <li> <a href="index.php?act=list-bill"><i class="fa-solid fas fa-comment-dollar ico-side"></i>Quản kí đơn hàng</a></li>
     <li> <a href="index.php?act=list-user"><i class="fa-solid fa-user ico-side"></i>Quản lí người dùng</a></li>
-    <li> <a href="index.php?act=analytics"><i class="fa-solid fas fa-poll ico-side"></i>Thống kê</a>
-    </li>
-    <li> <a href="index.php?act=list-comment"><i class="fa-solid far fa-comment-dots ico-side"></i>Quản lí bình luận</a>
-    </li>
+    <li> <a href="index.php?act=analytics"><i class="fa-solid fas fa-poll ico-side"></i>Thống kê</a></li>
+    <li> <a href="index.php?act=list-comment"><i class="fa-solid far fa-comment-dots ico-side"></i>Quản lí bình luận</a></li>
+    <?
+        if (isset ($_SESSION ['id'])) {
+            ?>
+                <li> <a href="index.php?act=logaut"><i class=" fa fa-undo ico-side"></i>Đăng xuất</a></li>
+            <?
+        }
+    ?>
 </ul>
 </nav>
+
             <div class="main-content">
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index.php" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+   
+  </nav>
                 <h3 class="title-page"> Dashboards </h3>
               
                 <section class="statis mt-4 text-center">

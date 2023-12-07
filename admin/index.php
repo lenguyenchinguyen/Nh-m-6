@@ -10,6 +10,7 @@ if (isset ($_SESSION ['id']) && !isset ($_GET ['act'])) {
     include_once('./header.php');
 }
 
+
 if (isset ($_SESSION ['id']) && isset ($_GET ['act'])) {
     include_once ('./header_slide.php') ;
 }
@@ -30,6 +31,10 @@ switch ($act) {
     break;
     case "login" :
         include "Login/login.php" ;
+    break ;
+    case "logaut" :
+        unset ($_SESSION ['id']) ;
+        header ("Location: index.php") ;
     break ;
 }
 
@@ -208,6 +213,7 @@ if (isset($_GET['act'])) {
         default:
             include_once('./home.php');
             break;
+
     }
 }
 // else {
