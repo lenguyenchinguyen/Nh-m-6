@@ -1,4 +1,5 @@
 <?php
+
 function insertCategory($nameCategory)
 {
     $sql = "INSERT INTO DANHMUC VALUES(NULL, '$nameCategory')";

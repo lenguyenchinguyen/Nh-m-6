@@ -21,7 +21,7 @@ class Product
             $sql = "UPDATE SANPHAM SET  NAME='$name', PRICE=$price, IMG='$nameImg', MOTA='$description' WHERE ID=$id";
             pdo_execute($sql);
         } else {
-            $sql = "UPDATE SANPHAM SET  NAME='$name', PRICE=$price, MOTA='$description'' WHERE ID=$id";
+            $sql = "UPDATE SANPHAM SET  NAME='$name', PRICE=$price, MOTA='$description' WHERE ID=$id";
             pdo_execute($sql);
         }
     }

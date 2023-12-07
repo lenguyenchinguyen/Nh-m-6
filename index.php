@@ -43,11 +43,7 @@
 	<?php
     if (isset($_GET["pages"])) {
         switch ($_GET["pages"]) {
-            case "index":
-                
-                break;
-
-            default:
+            case "trangchu":
                 include "client/homepage.php";
                 break;
 			 case "cart":

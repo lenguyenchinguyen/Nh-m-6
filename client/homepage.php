@@ -1,3 +1,15 @@
+	<link rel="stylesheet" href="/client/css/linearicons.css">
+	<link rel="stylesheet" href="/client/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/client/css/themify-icons.css">
+	<link rel="stylesheet" href="/client/css/bootstrap.css">
+	<link rel="stylesheet" href="/client/css/owl.carousel.css">
+	<link rel="stylesheet" href="/client/css/nice-select.css">
+	<link rel="stylesheet" href="/client/css/nouislider.min.css">
+	<link rel="stylesheet" href="/client/css/ion.rangeSlider.css" />
+	<link rel="stylesheet" href="/client/css/ion.rangeSlider.skinFlat.css" />
+	<link rel="stylesheet" href="/client/css/magnific-popup.css">
+	<link rel="stylesheet" href="/client/css/main.css">
+	
 	<!-- start banner Area -->
 	<section class="banner-area">
 	    <div class="container">
@@ -967,4 +979,19 @@
 	</section>
 >>>>>>> luongvhpc05477
 	<!-- End related-product Area -->
+	<script src="./client/js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+	 crossorigin="anonymous"></script>
+	<script src="./client/js/vendor/bootstrap.min.js"></script>
+	<script src="./client/js/jquery.ajaxchimp.min.js"></script>
+	<script src="./client/js/jquery.nice-select.min.js"></script>
+	<script src="./client/js/jquery.sticky.js"></script>
+	<script src="./client/js/nouislider.min.js"></script>
+	<script src="./client/js/countdown.js"></script>
+	<script src="./client/js/jquery.magnific-popup.min.js"></script>
+	<script src="./client/js/owl.carousel.min.js"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="./client/js/gmaps.min.js"></script>
+	<script src="./client/js/main.js"></script>
     
