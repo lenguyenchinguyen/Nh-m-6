@@ -59,7 +59,7 @@
     <!-- Right navbar links -->
    
   </nav>
-            </section>
+
 
 </body>
 
