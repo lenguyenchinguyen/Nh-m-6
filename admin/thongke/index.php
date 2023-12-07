@@ -24,7 +24,7 @@
 </style>
 <div class="row2">
     <div class="row2 font_title">
-        <h1>BẢNG THỐNG KÊ</h1>
+        <center><h1>BẢNG THỐNG KÊ</h1></center>
     </div>
     <div class="row2 form_content" style="margin-top: 20px;">
         <form action="#" method="POST">

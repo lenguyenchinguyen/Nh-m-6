@@ -33,14 +33,9 @@
 </head>
 
 <body>
-
-	<!-- Start Header Area -->
-		<?php
-			include './client/header.php';
-		?>
-	<!-- End Header Area -->
-
 	<?php
+	session_start () ;
+	include "module/pdo.php";
     if (isset($_GET["pages"])) {
         switch ($_GET["pages"]) {
             case "index":
@@ -50,26 +45,53 @@
             default:
                 include "client/homepage.php";
                 break;
-			 case "cart":
 
+
+			case "login":
+
+				include "client/login.php";
+				break;
+
+			case "logout":
+				unset ($_SESSION ['nguoiDung_id']) ;
+				header ("Location: index.php") ;
+				break;
+	
+			case "dangky":
+				include "client/create-account.php";
+				break;
+
+			 case "cart":
 				include "client/cart.php";
 			 	break;
-			case "checkout":
+			case "addcart":
+				include "client/cart.php";
+				break;
+			
+			case "xoacart":
+				include "client/cart.php";
+				break;
 
+			case "editcart":
+				include "client/cart.php";
+				break;
+
+			
+
+			case "checkout":
+				
 				include "client/checkout.php";
 				break;
+				
 			case "blog":
 
 				include "client/blog.php";
 				break;
 			case "category":
-
-				include "client/catagory.php";
+				
+				include "client/category.php";
 				break;
-			case "confirmation":
 
-				include "client/confirmation.php";
-				break;
 			case "contact":
 
 				include "client/contact.php";
@@ -91,22 +113,12 @@
 
 				include "client/single-blog.php";
 				break;
+				
 			case "single-product":
 
 				include "client/single-product.php";
 				break;
-			case "tracking":
-
-				include "client/tracking.php";
-				break;
-				
 			
-
-                // switch ($_GET["action"]) {
-                //     case "cart":
-                //         include "index.php";
-                //     break;
-                // }
         }
     }else{
         include "client/homepage.php";
@@ -114,9 +126,7 @@
     ?>
 
 	<!-- start footer Area -->
-		<?php
-			include './client/footer.php';
-		?>
+
 	<!-- End footer Area -->
 
 	<script src="./client/js/vendor/jquery-2.2.4.min.js"></script>

@@ -4,38 +4,39 @@ class ServiceCart
     function insertBill($idUser, $name, $address, $tel, $email, $payment, $total)
     {
         $time = date('d/m/Y');
-        $sql = "INSERT INTO BILL VALUES(NULL, '$name', '$address', '$tel', '$email', $payment, '$time', $total, 0, $idUser)";
+        $sql = "INSERT INTO cthoadon VALUES(NULL, '$name', '$address', '$tel', '$email', $payment, '$time', $total, 0, $idUser)";
         return pdo_execute_last_result($sql);
     }
     function insertCart($idUser, $img, $name, $price, $soluong, $idBill)
     {
-        $sql = "INSERT CART VALUES(NULL, $idUser, '$img', '$name', $price, $soluong, $idBill)";
+        $sql = "INSERT hoadon VALUES(NULL, $idUser, '$img', '$name', $price, $soluong, $idBill)";
         pdo_execute($sql);
     }
 
     function queryBill($id = null, $type = 'object')
     {
         if ($id && $type === 'object') {
-            $sql = "SELECT * FROM BILL WHERE ID = $id";
+            $sql = "SELECT * FROM cthoadon WHERE ID = $id";
             return pdo_query_one($sql);
         } else if ($id && $type === 'array') {
-            $sql = "SELECT * FROM BILL WHERE ID = $id";
+            $sql = "SELECT * FROM cthoadon WHERE ID = $id";
             return pdo_query($sql);
         } else {
-            $sql = "SELECT * FROM BILL";
+            $sql = "SELECT * FROM cthoadon";
             return pdo_query($sql);
         }
     }
 
+
     function queryCart($id)
     {
-        $sql = "SELECT * FROM CART WHERE IDBILL = $id";
+        $sql = "SELECT * FROM hoadon WHERE idbill = $id";
         return pdo_query($sql);
     }
 
     function queryBills($idUser)
     {
-        $sql = "SELECT * FROM BILL WHERE IDUSER = $idUser";
+        $sql = "SELECT * FROM cthoadon WHERE IDUSER = $idUser";
         return pdo_query($sql);
     }
 
@@ -59,13 +60,13 @@ class ServiceCart
 
     function deleteBill($id)
     {
-        $sql = "DELETE FROM BILL WHERE ID = $id";
+        $sql = "DELETE FROM cthoadon WHERE ID = $id";
         pdo_execute($sql);
     }
 
     function updateBill($id, $status)
     {
-        $sql = "UPDATE BILL SET STATUS=$status WHERE ID = $id";
+        $sql = "UPDATE cthoadon SET STATUS=$status WHERE ID = $id";
         pdo_execute($sql);
     }
 

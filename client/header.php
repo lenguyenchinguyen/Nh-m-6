@@ -13,43 +13,49 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="/client/homepage.php">Trang chủ</a></li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Cửa hàng</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="/client/category.php">danh mục cửa hàng</a></li>
-									<li class="nav-item"><a class="nav-link" href="/client/single-product.php">chi tiết sản phẩm</a></li>
-									<li class="nav-item"><a class="nav-link" href="/client/checkout.php">Thanh toán sản phẩm</a></li>
-									<li class="nav-item"><a class="nav-link" href="/client/cart.php">Giỏ hàng</a></li>
-									<li class="nav-item"><a class="nav-link" href="/client/confirmation.php">Xác nhận </a></li>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">TIN TỨC</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="/client/blog.php">Tin tức</a></li>
-									<li class="nav-item"><a class="nav-link" href="/client/single-blog.php">Tin tức chi tiết</a></li>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Trang</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="/client/login.php">Đăng nhập</a></li>
-									<li class="nav-item"><a class="nav-link" href="/client/tracking.php">Theo dõi</a></li>
-								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link" href="/client/contact.php">Liên hệ</a></li>
+							<li class="nav-item active"><a class="nav-link" href="index.php?pages=homepage">Trang chủ</a></li>
+							<li class="nav-item"><a class="nav-link" href="index.php?pages=category">Sản phẩm</a></li>						
+							<li class="nav-item"><a class="nav-link" href="index.php?pages=blog">Tin tức</a></li>
+							<li class="nav-item"><a class="nav-link" href="index.php?pages=contact">Liên hệ</a></li>
+							
+							
+
+							<?
+								if (isset ($_SESSION ['nguoiDung_id'])) {
+									?>
+										<li class="nav-item"><a class="nav-link" href="index.php?pages=logout">Đăng xuất</a></li>
+									<?
+								} else {
+									?>
+										<li class="nav-item"><a class="nav-link" href="index.php?pages=login">Đăng nhập</a></li>
+									<?
+								}
+							?>		
+										
 						</ul>
+
 						<ul class="nav navbar-nav navbar-right">
-							<li class="nav-item"><a href="/client/cart.php" class="cart"><span class="ti-bag"></span></a></li>
+							<li class="nav-item"><a href="index.php?pages=cart" class="cart"><span class="ti-bag"></span></a></li>
 							<li class="nav-item">
 								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
 							</li>
+							<?
+						if (isset ($_SESSION ['nguoiDung_id'])) {
+							include_once 'config/database.php' ;
+							global $connection ;
+							$id = $_SESSION ['nguoiDung_id'] ;
+							$select = mysqli_query ($connection , "SELECT * FROM taikhoan WHERE id = '$id'") ;
+							while ($data = mysqli_fetch_assoc ($select)) {
+								?>
+									<li style="margin-top:auto; margin-bottom:auto;" class="nav-item"><a class="nav-link" href="index.php?pages=login"><?= $data ['user'] ;?></a></li>
+								<?
+								
+							}
+						}
+					?>	
 						</ul>
 					</div>
+					
 				</div>
 			</nav>
 		</div>

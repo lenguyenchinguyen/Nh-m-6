@@ -1,14 +1,9 @@
-<?php 
-include_once '../config/database.php';
-
-$data = getAllProduct();
-
-// var_dump($data);
-
-?>
-
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
+
+<?
+	include "./config/modules/product.php" ;
+?>
 
 <head>
 	<!-- Mobile Specific Meta -->
@@ -26,9 +21,7 @@ $data = getAllProduct();
 	<!-- Site Title --
 	<title>Karma Shop</title>
 
-	<!--
-            CSS
-            ============================================= -->
+	<!-- CSS ============================================= -->
 	<link rel="stylesheet" href="/client/css/linearicons.css">
 	<link rel="stylesheet" href="/client/css/owl.carousel.css">
 	<link rel="stylesheet" href="/client/css/themify-icons.css">
@@ -41,72 +34,9 @@ $data = getAllProduct();
 <body id="category">
 
 	<!-- Start Header Area -->
-	<header class="header_area sticky-header">
-		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light main_box">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="/client/homepage.php"><img src="/client/img/logo.jpg" style="width:100px" alt=""></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item"><a class="nav-link" href="/client/homepage.php">trang chủ</a></li>
-							<li class="nav-item submenu dropdown active">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Cửa hàng</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item active"><a class="nav-link" href="/client/category.php">danh mục cửa hàng</a></li>
-									<li class="nav-item"><a class="nav-link" href="/client/single-product.php">chi tiết sản phẩm</a></li>
-									<li class="nav-item"><a class="nav-link" href="/client/checkout.php">thanh toán sản phâm</a></li>
-									<li class="nav-item"><a class="nav-link" href="/client/cart.php">giỏ hàng</a></li>
-									<li class="nav-item"><a class="nav-link" href="/client/confirmation.php">xác nhận </a></li>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Tin tức</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="/client/blog.php">Tin tức</a></li>
-									<li class="nav-item"><a class="nav-link" href="/client/single-blog.php">chi tiết bài viết</a></li>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Trang </a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="/client/login.php">đăng nhập</a></li>
-									<li class="nav-item"><a class="nav-link" href="/client/tracking.php">theo dõi </a></li>
-									
-								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link" href="/client/contact.php">Liên hệ</a></li>
-						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li class="nav-item"><a href="/client/cart.php" class="cart"><span class="ti-bag"></span></a></li>
-							<li class="nav-item">
-								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
-		<div class="search_input" id="search_input_box">
-			<div class="container">
-				<form class="d-flex justify-content-between">
-					<input type="text" class="form-control" id="search_input" placeholder="Search Here">
-					<button type="submit" class="btn"></button>
-					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
-				</form>
-			</div>
-		</div>
-	</header>
+    <?php 
+        include "header.php";
+    ?>
 	<!-- End Header Area -->
 
 	<!-- Start Banner Area -->
@@ -114,11 +44,10 @@ $data = getAllProduct();
 		<div class="container">
 			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
 				<div class="col-first">
-					<h1>Trang danh mục cửa hàng</h1>
+					<h1>Trang Sản phẩm</h1>
 					<nav class="d-flex align-items-center">
 						<a href="index.php">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
-						<a href="/client/category.php">cửa hàng<span class="lnr lnr-arrow-right"></span></a>
-						<a href="/client/category.php">Thể loại thời trang</a>
+						<a href="/client/category.php">Sản phẩm<span ></span></a>
 					</nav>
 				</div>
 			</div>
@@ -129,112 +58,20 @@ $data = getAllProduct();
 		<div class="row">
 			<div class="col-xl-3 col-lg-4 col-md-5">
 				<div class="sidebar-categories">
-					<div class="head">Duyệt danh mục</div>
+					<div class="head">Danh mục</div>
 					<ul class="main-categories">
-						<li class="main-nav-list"><a data-toggle="collapse" href="#fruitsVegetable" aria-expanded="false" aria-controls="fruitsVegetable"><span
-								 class="lnr lnr-arrow-right"></span>Fruits and Vegetables<span class="number">(53)</span></a>
-							<ul class="collapse" id="fruitsVegetable" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
-								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
+						<li class="main-nav-list">
+								<?
+									include './config/modules/danhmuc.php' ;
+									$danhMuc = getAlldanhmuc () ;
+									foreach ($danhMuc AS $danhMuc) {
+										?>
+											<li class="main-nav-list child"><a href="index.php?pages=category&iddanhmuc=<?= $danhMuc ['id']?>"><?= $danhMuc ['name']?><span class="number">(12)</span></a></li>
+										<?
+									}
+								?>
 							</ul>
 						</li>
-
-						<li class="main-nav-list"><a data-toggle="collapse" href="#meatFish" aria-expanded="false" aria-controls="meatFish"><span
-								 class="lnr lnr-arrow-right"></span>Meat and Fish<span class="number">(53)</span></a>
-							<ul class="collapse" id="meatFish" data-toggle="collapse" aria-expanded="false" aria-controls="meatFish">
-								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
-							</ul>
-						</li>
-						<li class="main-nav-list"><a data-toggle="collapse" href="#cooking" aria-expanded="false" aria-controls="cooking"><span
-								 class="lnr lnr-arrow-right"></span>Cooking<span class="number">(53)</span></a>
-							<ul class="collapse" id="cooking" data-toggle="collapse" aria-expanded="false" aria-controls="cooking">
-								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
-							</ul>
-						</li>
-						<li class="main-nav-list"><a data-toggle="collapse" href="#beverages" aria-expanded="false" aria-controls="beverages"><span
-								 class="lnr lnr-arrow-right"></span>Beverages<span class="number">(24)</span></a>
-							<ul class="collapse" id="beverages" data-toggle="collapse" aria-expanded="false" aria-controls="beverages">
-								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
-							</ul>
-						</li>
-						<li class="main-nav-list"><a data-toggle="collapse" href="#homeClean" aria-expanded="false" aria-controls="homeClean"><span
-								 class="lnr lnr-arrow-right"></span>Home and Cleaning<span class="number">(53)</span></a>
-							<ul class="collapse" id="homeClean" data-toggle="collapse" aria-expanded="false" aria-controls="homeClean">
-								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
-							</ul>
-						</li>
-						<li class="main-nav-list"><a href="#">Pest Control<span class="number">(24)</span></a></li>
-						<li class="main-nav-list"><a data-toggle="collapse" href="#officeProduct" aria-expanded="false" aria-controls="officeProduct"><span
-								 class="lnr lnr-arrow-right"></span>Office Products<span class="number">(77)</span></a>
-							<ul class="collapse" id="officeProduct" data-toggle="collapse" aria-expanded="false" aria-controls="officeProduct">
-								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
-							</ul>
-						</li>
-						<li class="main-nav-list"><a data-toggle="collapse" href="#beauttyProduct" aria-expanded="false" aria-controls="beauttyProduct"><span
-								 class="lnr lnr-arrow-right"></span>Beauty Products<span class="number">(65)</span></a>
-							<ul class="collapse" id="beauttyProduct" data-toggle="collapse" aria-expanded="false" aria-controls="beauttyProduct">
-								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
-							</ul>
-						</li>
-						<li class="main-nav-list"><a data-toggle="collapse" href="#healthProduct" aria-expanded="false" aria-controls="healthProduct"><span
-								 class="lnr lnr-arrow-right"></span>Health Products<span class="number">(29)</span></a>
-							<ul class="collapse" id="healthProduct" data-toggle="collapse" aria-expanded="false" aria-controls="healthProduct">
-								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
-							</ul>
-						</li>
-						<li class="main-nav-list"><a href="#">Pet Care<span class="number">(29)</span></a></li>
-						<li class="main-nav-list"><a data-toggle="collapse" href="#homeAppliance" aria-expanded="false" aria-controls="homeAppliance"><span
-								 class="lnr lnr-arrow-right"></span>Home Appliances<span class="number">(15)</span></a>
-							<ul class="collapse" id="homeAppliance" data-toggle="collapse" aria-expanded="false" aria-controls="homeAppliance">
-								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
-							</ul>
-						</li>
-						<li class="main-nav-list"><a class="border-bottom-0" data-toggle="collapse" href="#babyCare" aria-expanded="false"
-							 aria-controls="babyCare"><span class="lnr lnr-arrow-right"></span>Baby Care<span class="number">(48)</span></a>
-							<ul class="collapse" id="babyCare" data-toggle="collapse" aria-expanded="false" aria-controls="babyCare">
-								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
-								<li class="main-nav-list child"><a href="#" class="border-bottom-0">Meat<span class="number">(11)</span></a></li>
-							</ul>
-						</li>
-					</ul>
 				</div>
 				<div class="sidebar-filter mt-50">
 					<div class="top-filter-head">Bộ lọc sản phẩm</div>
@@ -242,11 +79,10 @@ $data = getAllProduct();
 						<div class="head">Nhãn hiệu</div>
 						<form action="#">
 							<ul>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="apple" name="brand"><label for="apple">Apple<span>(29)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="asus" name="brand"><label for="asus">Asus<span>(29)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="gionee" name="brand"><label for="gionee">Gionee<span>(19)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="micromax" name="brand"><label for="micromax">Micromax<span>(19)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="samsung" name="brand"><label for="samsung">Samsung<span>(19)</span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="Nike" name="brand"><label for="Nike">Nike<span>(12)</span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="Adidas" name="brand"><label for="Adidas">Adidas<span>(12)</span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="Sneaker" name="brand"><label for="Sneaker">Sneaker<span>(12)</span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="dungdichvesinh" name="brand"><label for="dungdichvesinh">Dung dịch vệ sinh giày<span>(5)</span></label></li>
 							</ul>
 						</form>
 					</div>
@@ -254,13 +90,10 @@ $data = getAllProduct();
 						<div class="head">màu sắc</div>
 						<form action="#">
 							<ul>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="black" name="color"><label for="black">Black<span>(29)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="balckleather" name="color"><label for="balckleather">Black
-										Leather<span>(29)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="blackred" name="color"><label for="blackred">Black
-										with red<span>(19)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="gold" name="color"><label for="gold">Gold<span>(19)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Spacegrey<span>(19)</span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="Đen" name="color"><label for="Đen">Đen<span>(29)</span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="trang" name="color"><label for="trang">Trắng<span>(29)</span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="vang" name="color"><label for="vang">Vàng<span>(19)</span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="xam" name="color"><label for="xam">Xám<span>(19)</span></label></li>
 							</ul>
 						</form>
 					</div>
@@ -270,10 +103,10 @@ $data = getAllProduct();
 							<div id="price-range"></div>
 							<div class="value-wrapper d-flex">
 								<div class="price">Price:</div>
-								<span>$</span>
+								<span>VND</span>
 								<div id="lower-value"></div>
-								<div class="to">to</div>
-								<span>$</span>
+								<div class="to">Đến</div>
+								<span>VND</span>
 								<div id="upper-value"></div>
 							</div>
 						</div>
@@ -285,9 +118,9 @@ $data = getAllProduct();
 				<div class="filter-bar d-flex flex-wrap align-items-center">
 					<div class="sorting">
 						<select>
-							<option value="1">Default sorting</option>
-							<option value="1">Default sorting</option>
-							<option value="1">Default sorting</option>
+							<option value="1">Nike</option>
+							<option value="1">Adidas</option>
+							<option value="1">Sneaker</option>
 						</select>
 					</div>
 					<div class="sorting mr-auto">
@@ -298,137 +131,92 @@ $data = getAllProduct();
 						</select>
 					</div>
 					<div class="pagination">
-						<a href="#" class="prev-arrow"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
+						<a href="#" class="prev-arrow"><i class="fa fa-long-arrow-left" aria-hidden="true">Trang</i></a>
 						<a href="#" class="active">1</a>
 						<a href="#">2</a>
 						<a href="#">3</a>
-						<a href="#" class="dot-dot"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-						<a href="#">6</a>
-						<a href="#" class="next-arrow"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 					</div>
 				</div>
+
 				<!-- End Filter Bar -->
 				<!-- Start Best Seller -->
 				<section class="lattest-product-area pb-40 category-list">
 					<div class="row">
 						<!-- single product -->
-						<?php if(isset($data)): ?>
+						<?php if (!isset ($_GET ['iddanhmuc'])): ?>
+						<?php if (isset ($_SESSION ['nguoiDung_id']) || !isset ($_SESSION ['nguoiDung_id'])) :?>
+						<?php 
+							$data = getAllProduct();
+						?>
 						<?php foreach($data as $key): ?>
-						<a href="single-product.php/?id=<?=  $key['id'] ?>">
+						<a href="index.php?pages=single-product&id=<?=  $key['id'] ?>">
 						<div class="col-lg-4 col-md-6">
 							<div class="single-product">
-								<img class="img-fluid" src="../admin/<?= $key['thumbnail'] ?>" alt="" >
+								<img class="img-fluid" src="../upload/<?= $key['img'] ?>" alt="" >
 								<div class="product-details">
-									<h6><?= $key['name'] ?></h6>
+									<h6><?echo substr($key['name'] , 0 , 28) . '...'  ?></h6>
 									<div class="price">
-										<h6><?= number_format($key['sale_price'],0,".",",") ?></h6>
-										<h6 class="l-through"><?= number_format($key['price'],0,".",",") ?></h6>
-									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
-											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
-										</a>
+										<!-- <h6><= number_format($key['sale_price'],0,".",",") ?></h6> -->
+										<h6 class=""><?= number_format($key['price'],0,".",",") ?>VND</h6>
 									</div>
 								</div>
 							</div>
 							</a>	
-							<form action="cart.php" method="post">
-							<button type="submit" class="btn btn-primary" name="addcart">Thêm vào giỏ hàng</button>
+							<form action="index.php?pages=cart" method="post">
+							<button type="submit" class="btn btn-primary" name="addcart" >Thêm vào giỏ hàng</button>
                                         <input type="hidden" name="id" value="<?= $key['id'] ?>">
-                                        <input type="hidden" name="thumbnail" value="<?= $key['thumbnail'] ?>">
+                                        <input type="hidden" name="img" value="<?= $key['img'] ?>">
                                         <input type="hidden" name="name" value="<?= $key['name'] ?>">
-                                        <input type="hidden" name="price" value="<?= $key['price'] ?>">
-                                        <input type="hidden" name="sale_price" value="<?= $key['sale_price'] ?>">
-										</form>
+                                        <input type="hidden" name="price" value="<?= $key['price'] ?>">                                    
+							</form>
 						</div>
-						
 						<?php endforeach; ?>
 						<?php endif; ?>
-						<!-- single product -->
-						<!-- <div class="col-lg-4 col-md-6">
-							<div class="single-product">
-								<img class="img-fluid" src="/client/img/product/p2.jpg" alt="">
-								<div class="product-details">
-									<h6>addidas New Hammer sole
-										for Sports person</h6>
-									<div class="price">
-										<h6>$150.00</h6>
-										<h6 class="l-through">$210.00</h6>
-									</div>
-									<div class="prd-bottom">
+						<?php endif; ?>
 
-										<a href="" class="social-info">
-											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
-										</a>
+						<?php if (isset ($_GET ['iddanhmuc'])): ?>
+						<?php if (isset ($_SESSION ['nguoiDung_id']) || !isset ($_SESSION ['nguoiDung_id'])) :?>
+						<?php 
+							$data = getProductCategory($_GET ['iddanhmuc']);
+						?>
+						<?php foreach($data as $key): ?>
+						<a href="index.php?pages=single-product&id=<?=  $key['id'] ?>">
+						<div class="col-lg-4 col-md-6">
+							<div class="single-product">
+								<img class="img-fluid" src="../upload/<?= $key['img'] ?>" alt="" >
+								<div class="product-details">
+									<h6><?echo substr($key['name'] , 0 , 28) . ''  ?></h6>
+									<div class="price">
+										<!-- <h6><= number_format($key['sale_price'],0,".",",") ?></h6> -->
+										<h6 class=""><?= number_format($key['price'],0,".",",") ?>VND</h6>
 									</div>
 								</div>
 							</div>
-						</div> -->
-						<!-- single product -->
-						<!-- <div class="col-lg-4 col-md-6">
-							<div class="single-product">
-								<img class="img-fluid" src="/client/img/product/p3.jpg" alt="">
-								<div class="product-details">
-									<h6>addidas New Hammer sole
-										for Sports person</h6>
-									<div class="price">
-										<h6>$150.00</h6>
-										<h6 class="l-through">$210.00</h6>
-									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
-											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
-										</a>
-									</div>
-								</div>
-							</div>
+							</a>	
+							<form action="index.php?pages=cart" method="post">
+							<button type="submit" class="btn btn-primary" name="addcart" >Thêm vào giỏ hàng</button>
+                                        <input type="hidden" name="id" value="<?= $key['id'] ?>">
+                                        <input type="hidden" name="img" value="<?= $key['img'] ?>">
+                                        <input type="hidden" name="name" value="<?= $key['name'] ?>">
+                                        <input type="hidden" name="price" value="<?= $key['price'] ?>">                                    
+							</form>
 						</div>
-						single product  -->
+						<?php endforeach; ?>
+						<?php endif; ?>
+						<?php endif; ?>
 				</section>
+				<br>
 				<!-- End Best Seller -->
 				<!-- Start Filter Bar -->
 				<div class="filter-bar d-flex flex-wrap align-items-center">
+					<div class="sorting">
+						<select>
+							<option value="1">Nike</option>
+							<option value="1">Adidas</option>
+							<option value="1">Sneaker</option>
+							
+						</select>
+					</div>
 					<div class="sorting mr-auto">
 						<select>
 							<option value="1">Show 12</option>
@@ -437,10 +225,10 @@ $data = getAllProduct();
 						</select>
 					</div>
 					<div class="pagination">
-						<a href="#" class="prev-arrow"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
+						<a href="#" class="prev-arrow"><i class="fa fa-long-arrow-left" aria-hidden="true">Trang</i></a>
 						<a href="#" class="active">1</a>
 						<a href="#">2</a>
-						<a href="#" class="next-arrow"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+						<a href="#">3</a>
 					</div>
 				</div>
 				<!-- End Filter Bar -->
@@ -585,84 +373,9 @@ $data = getAllProduct();
 	<!-- End related-product Area -->
 
 	<!-- start footer Area -->
-    <footer class="footer-area section_gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3  col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Về chúng tôi</h6>
-                        <p>
-                            Địa chỉ: Hẻm 379 , đường Trần Quang Diệu, quận Bình Thủy, TP.Cần Thơ.
-                            Hotline: 0359235876. <br>
-                            EMAIL: luongvhpc05477@fpt.edu.vn
-                    </div>
-                </div>
-                <div class="col-lg-4  col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Dịch vụ khách hàng</h6>
-                        <p>Thanh Toán <br>
-                            Vận chuyển và giao hàng <br>
-                            Trả lại <br>
-                            Ủng hộ </p>
-                        <div class="" id="mc_embed_signup">
-
-                            <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                method="get" class="form-inline">
-
-                                <div class="d-flex flex-row">
-
-                                    <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''"
-                                        onblur="this.placeholder = 'Enter Email '" required="" type="email">
-
-
-                                    <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right"
-                                            aria-hidden="true"></i></button>
-                                    <div style="position: absolute; left: -5000px;">
-                                        <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
-                                            type="text">
-                                    </div>
-
-                                    <!-- <div class="col-lg-4 col-md-4">
-                                                    <button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
-                                                </div>  -->
-                                </div>
-                                <div class="info"></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3  col-md-6 col-sm-6">
-                    <div class="single-footer-widget mail-chimp">
-                        <h6 class="mb-20">Instragram Feed</h6>
-                        <ul class="instafeed d-flex flex-wrap">
-                            <li><img src="img/i1.jpg" alt=""></li>
-                            <li><img src="img/i2.jpg" alt=""></li>
-                            <li><img src="img/i3.jpg" alt=""></li>
-                            <li><img src="img/i4.jpg" alt=""></li>
-                            <li><img src="img/i5.jpg" alt=""></li>
-                            <li><img src="img/i6.jpg" alt=""></li>
-                            <li><img src="img/i7.jpg" alt=""></li>
-                            <li><img src="img/i8.jpg" alt=""></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Theo dõi chúng tôi</h6>
-                        <p>Các trang mạng xã hội</p>
-                        <div class="footer-social d-flex align-items-center">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-behance"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
-                <p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    <?php
+        include "footer.php"
+    ?>
 </p>
             </div>
         </div>

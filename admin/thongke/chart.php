@@ -1,7 +1,7 @@
 <script src="https://www.gstatic.com/charts/loader.js"></script>
 <div class="row2">
     <div class="row2 font_title">
-        <h1>Biểu đồ</h1>
+    <center><h1>Biểu đồ</h1></center>
     </div>
     <div class="row2 form_content">
         <div id="myChart" style="width: 100%; height: 500px;"></div>

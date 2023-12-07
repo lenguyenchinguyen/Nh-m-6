@@ -1,19 +1,19 @@
 <?php
 
-    $server = "localhost";
-    $username = "root";
-    $password = "mysql";
-    $database = "shop_sneaker";
-    
-    global $connection;
-    
+$server = "localhost";
+$username = "root";
+$password = "mysql";
+$database = "thu";
+
+global $connection;
+
 
 $connection = mysqli_connect($server, $username, $password, $database );
 
 
 if(!$connection){
-    echo "lỗi kết nối cơ sở dữ liệu!";
-    die();
+echo "lỗi kết nối cơ sở dữ lieu!";
+die();
 }
 
 

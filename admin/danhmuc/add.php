@@ -1,4 +1,4 @@
-<h1>THÊM MỚI LOẠI</h1>
+<center><h1>THÊM MỚI LOẠI</h1></center>
 <form action="index.php?act=add-category" method="POST" onsubmit="return validateForm()">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Mã loại</label>

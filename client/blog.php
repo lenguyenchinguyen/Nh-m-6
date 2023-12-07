@@ -34,72 +34,9 @@
 <body>
 
     <!-- Start Header Area -->
-	<header class="header_area sticky-header">
-		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light main_box">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.php"><img src="/client/img/logo.jpg" style="width:100px" alt=""></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item"><a class="nav-link" href="index.php">Trang chủ</a></li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Cửa hàng</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="/client/category.php">Danh sách sản phẩm</a></li>
-									<li class="nav-item"><a class="nav-link" href="/client/single-product.php">Chi tiết sản phẩm</a></li>
-									<li class="nav-item"><a class="nav-link" href="/client/checkout.php">Thanh toán sản phẩm</a></li>
-									<li class="nav-item"><a class="nav-link" href="/client/cart.php">Giỏ hàng</a></li>
-									<li class="nav-item"><a class="nav-link" href="/client/confirmation.php">Xác nhận</a></li>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown active">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Tin tức</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item active"><a class="nav-link" href="/client/blog.php">Tin tức</a></li>
-									<li class="nav-item"><a class="nav-link" href="/client/single-blog.php">Chi tiết Tin tức</a></li>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Trang</a>    
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="/client/login.php">Đăng nhập</a></li>
-									<li class="nav-item"><a class="nav-link" href="/client/tracking.php">Theo dõi</a></li>
-									
-								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link" href="/client/contact.php">Liên hệ</a></li>
-						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li class="nav-item"><a href="/client/cart.php" class="cart"><span class="ti-bag"></span></a></li>
-							<li class="nav-item">
-								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
-		<div class="search_input" id="search_input_box">
-			<div class="container">
-				<form class="d-flex justify-content-between">
-					<input type="text" class="form-control" id="search_input" placeholder="Search Here">
-					<button type="submit" class="btn"></button>
-					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
-				</form>
-			</div>
-		</div>
-	</header>
+    <?php 
+        include "header.php";
+    ?>
 	<!-- End Header Area -->
 
     <!-- Start Banner Area -->
@@ -124,7 +61,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="categories_post">
-                        <img src="img/blog/cat-post/nike.jpg" alt="post">
+                        <img src="client/img/blog/cat-post/nike.jpg" alt="post">
                         <div class="categories_details">
                             <div class="categories_text">
                                 <a href="blog-details.php">
@@ -138,7 +75,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="categories_post">
-                        <img src="img/blog/cat-post/adidas.jpg" alt="post">
+                        <img src="client/img/blog/cat-post/adidas.jpg" alt="post">
                         <div class="categories_details">
                             <div class="categories_text">
                                 <a href="blog-details.php">
@@ -152,7 +89,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="categories_post">
-                        <img src="img/blog/cat-post/ker.jpg" alt="post">
+                        <img src="client/img/blog/cat-post/ker.jpg" alt="post">
                         <div class="categories_details">
                             <div class="categories_text">
                                 <a href="blog-details.php">
@@ -194,7 +131,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="/admin/uploads/2023/08/n3.webp" alt="">
+                                    <img src="../client/img/blog/cat-post/adidas.jpg" alt="">
                                     <div class="blog_details">
                                         <a href="single-blog.php">
                                             <h2>Những điều không phải ai cũng biết về thương hiệu Nike</h2>
@@ -226,7 +163,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="/admin/uploads/2023/08/n4.jpg" alt="">
+                                    <img src="../client/img/blog/cat-post/ker.jpg" alt="">
                                     <div class="blog_details">
                                         <a href="single-blog.php">
                                             <h2>Các mẫu giày Nike được săn đón nhiều nhất năm 2022</h2>
@@ -259,7 +196,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="/admin/uploads/2023/08/a5.avif" alt="">
+                                    <img src="../client/img/blog/cat-post/nike.jpg" alt="">
                                     <div class="blog_details">
                                         <a href="single-blog.php">
                                             <h2>BẬT MÍ NHỮNG SỰ THẬT THÚ VỊ VỀ GIÀY ADIDAS MÀ BẠN NÊN BIẾT</h2>
@@ -291,7 +228,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="/admin/uploads/2023/08/a4.avif" alt="">
+                                    <img src="../client/img/blog/cat-post/n11.webp" alt="">
                                     <div class="blog_details">
                                         <a href="single-blog.php">
                                             <h2>Adidas đã thay đổi cách chúng ta nghĩ về giày chạy bộ như thế nào?</h2>
@@ -491,84 +428,9 @@
     <!--================Blog Area =================-->
 
     <!-- start footer Area -->
-    <footer class="footer-area section_gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3  col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Về chúng tôi</h6>
-                        <p>
-                            Địa chỉ: Hẻm 379 , đường Trần Quang Diệu, quận Bình Thủy, TP.Cần Thơ.
-                            Hotline: 0359235876. <br>
-                            EMAIL: luongvhpc05477@fpt.edu.vn
-                    </div>
-                </div>
-                <div class="col-lg-4  col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Dịch vụ khách hàng</h6>
-                        <p>Thanh Toán <br>
-                            Vận chuyển và giao hàng <br>
-                            Trả lại <br>
-                            Ủng hộ </p>
-                        <div class="" id="mc_embed_signup">
-
-                            <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                method="get" class="form-inline">
-
-                                <div class="d-flex flex-row">
-
-                                    <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''"
-                                        onblur="this.placeholder = 'Enter Email '" required="" type="email">
-
-
-                                    <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right"
-                                            aria-hidden="true"></i></button>
-                                    <div style="position: absolute; left: -5000px;">
-                                        <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
-                                            type="text">
-                                    </div>
-
-                                    <!-- <div class="col-lg-4 col-md-4">
-                                                    <button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
-                                                </div>  -->
-                                </div>
-                                <div class="info"></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3  col-md-6 col-sm-6">
-                    <div class="single-footer-widget mail-chimp">
-                        <h6 class="mb-20">Instragram Feed</h6>
-                        <ul class="instafeed d-flex flex-wrap">
-                            <li><img src="img/i1.jpg" alt=""></li>
-                            <li><img src="img/i2.jpg" alt=""></li>
-                            <li><img src="img/i3.jpg" alt=""></li>
-                            <li><img src="img/i4.jpg" alt=""></li>
-                            <li><img src="img/i5.jpg" alt=""></li>
-                            <li><img src="img/i6.jpg" alt=""></li>
-                            <li><img src="img/i7.jpg" alt=""></li>
-                            <li><img src="img/i8.jpg" alt=""></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Theo dõi chúng tôi</h6>
-                        <p>Các trang mạng xã hội</p>
-                        <div class="footer-social d-flex align-items-center">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-behance"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
-                <p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    <?php
+        include "footer.php"
+    ?>
 </p>
             </div>
         </div>

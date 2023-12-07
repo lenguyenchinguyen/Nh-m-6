@@ -31,12 +31,35 @@
     <li> <a href="index.php?act=analytics"><i class="fa-solid fas fa-poll ico-side"></i>Thống kê</a>
     </li>
     <li> <a href="index.php?act=list-comment"><i class="fa-solid far fa-comment-dots ico-side"></i>Quản lí bình luận</a>
-    </li>
+    <?
+        if (isset ($_SESSION ['id'])) {
+            ?>
+                <li> <a href="index.php?act=logaut"><i class="fa fa-undo ico-side"></i>Đăng xuất</a></li>
+            <?
+        }
+    ?>
+
 </ul>
 </nav>
             <div class="main-content">
-            
-            </section>
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+   
+  </nav>
+
 
 </body>
 
