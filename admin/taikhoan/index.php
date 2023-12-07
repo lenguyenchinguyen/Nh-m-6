@@ -48,7 +48,7 @@
                         $editUser = "/admin/index.php?act=edit-user&id=" . $value['id'];
                     ?>
                         <tr>
-                            <td><input type="checkbox" name="" id="" /></td>
+                          
                             <td>
                                 <?php echo $value['id'] ?>
                             </td>
@@ -59,7 +59,7 @@
                                 <?php echo $value['email'] ?>
                             </td>
                             <td>
-                                <?php echo $value['pass'] ?>
+                                <?php echo md5($value['pass']) ?>
                             </td>
                             <td>
                                 <?php echo $value['address'] ?>

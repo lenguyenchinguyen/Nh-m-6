@@ -12,159 +12,206 @@
     <title>Document</title>
 </head>
 <style>
-@import url('https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css');
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        background: #9FD7F9;
+    }
 
-html {
-   height: 100%;
-}
+    .logo {
+        font-size: 24px;
+        color: #FF0000;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
 
-body {
-/* Remember to use the other versions for IE 10 and older browsers! */
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 100%;
-font-family: 'lato', sans-serif;
-color: #fff;
-background: #222222;
-background: #16222A; /* fallback for old browsers */
-background: -webkit-linear-gradient(to top, #16222A , #3A6073); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #16222A , #3A6073); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+    .login-item {
+        background-color: #f5f5f5;
+        padding: 40px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-.container {
-	background:rgba(58,63,68,0.5);
-  border-radius: 5px;
-  box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
-  width:450px;
-  display: flex;  
-  flex-direction: column;
-}
+    .form-field {
+        margin-bottom: 15px;
+    }
 
-.logo{
-  font-family: "museo-slab";  
-  font-size:20px;
-  text-align: center;
-  padding: 20px 20px 0;
-  margin:0;
-}
+    .form-label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
 
-.login-item {
-	color: #ffff;
-	padding:25px 25px 0;
-	margin: 20px 20px 0;	
-	border-radius: 3px;
-}
+    .form-input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
 
-input {
-  border: 0;
-  color: inherit;
-  font: inherit;
-  margin: 0;
-  outline: 0;
-  padding: 0;
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s;
-}
+    .form-input:focus {
+        outline: none;
+        border-color: #6c63ff;
+    }
 
-.user:before {
-  content: '\f007';
-  font: 14px fontawesome;
-	color: #5b5b5b;
-}
+    .form-error {
+        color: red;
+        font-size: 12px;
+    }
 
-.lock:before {
-  content: '\f023';
-  font: 14px fontawesome;
-	color: #5b5b5b;
-}
-
-.form input[type="password"], .form input[type="text"], .form input[type="submit"] {
-  width: 100%;
-}
-
-.form-login label,
-.form-login input[type="text"],
-.form-login input[type="password"],
-.form-login input[type="submit"] {
-  border-radius: 0.25rem;
-  padding: 1rem;
-  color: #3A3F44;  
-}
-
-.form-login label {
-  background-color: #222222;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.form-login input[type="text"], .form-login input[type="password"] {
-  background-color: #ffffff;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-}
-.form-login input[type="text"]:focus, .form-login input[type="text"]:hover, .form-login input[type="password"]:focus, .form-login input[type="password"]:hover {
-  background-color: #eeeeee;
-}
-.form-login input[type="submit"] {
-  background-color: #00B9BC;
-  color: #eee;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.form-login input[type="submit"]:focus, .form-login input[type="submit"]:hover {
-  background-color: #197071;
-}
-.form-field {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 2rem;
-}
+    .form-submit {
+        text-align: center;
+    }
 
 
-.hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
 
-.text--center {
-  text-align: center;
-}
-
- 
+    .hihi {
+        text-align: center;
+    }
+    
+    .hihi input[type="submit"] {
+        background-color: #6c63ff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .hihi input[type="submit"]:hover {
+        background-color: #554eeb;
+    }
 </style>
 <body>
 
-<div class="container">
-    <div class="logo">Đăng Nhập</div>
+<!-- <div class="container">
+  <div class="logo">Đăng Nhập</div>
+  <div class="login-item">
+    <form action="" method="post" class="form form-login" id="login-form">
+      <div class="form-field">
+        <label class="user" for="login-username"><span class="hidden">Username</span></label>
+        <input name="ten" id="login-username" type="text" class="form-input" placeholder="Nhập Họ Tên">
+      </div>
+
+      <div class="form-field">
+        <label class="password" for="login-password"><span class="hidden">Password</span></label>
+        <input name="matKhau" id="login-password" type="password" class="form-input" placeholder="Nhập Password">
+      </div>
+
+      <div class="form-field">
+        <input type="submit" name="submit" value="Log in">
+      </div>
+    </form>
+  </div>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      var usernameInput = document.getElementById('login-username');
+      var passwordInput = document.getElementById('login-password');
+      
+      if (usernameInput.value.trim() === '' || passwordInput.value.trim() === '') {
+        event.preventDefault(); // Prevent form submission
+        ('Vui lòng nhập đầy đủ thông tin đăng nhập.'); // Display an error message
+      }
+    });
+  </script> -->
+
+
+  <div class="container">
+    <div class="logo">Đăng nhập</div>
     <div class="login-item">
-      <form action="" method="post" class="form form-login">
+    <form action="" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+
+    <?php
+    function checkLogin($user, $pass)
+    {
+        // Thực hiện kiểm tra với cơ sở dữ liệu hoặc bất kỳ cơ chế nào khác
+        // Trong ví dụ này, sử dụng điều kiện đơn giản
+        $validUsername = "example_user";
+        $validPassword = "example_password";
+
+        return ($user == $validUsername && $pass == $validPassword);
+    }
+
+    // Kiểm tra xem form đã được submit chưa
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Lấy dữ liệu từ form
+        $username = isset($_POST['hoten']) ? $_POST['hoten'] : '';
+        $password = isset($_POST['matkhau']) ? $_POST['matkhau'] : '';
+
+        // Kiểm tra đăng nhập
+        if (!empty($username) && !empty($password) && checkLogin($username, $password)) {
+            // Đăng nhập thành công
+            header("Location: admin/index.php"); // Chuyển hướng đến trang chào mừng
+            exit();
+        } else {
+            // Hiển thị thông báo lỗi và quay lại trang đăng nhập
+            echo '<span style="color: red;">Tên đăng nhập hoặc mật khẩu không đúng. Vui lòng thử lại.</span>';
+        }
+    }
+    ?>
+
+
+
+
         <div class="form-field">
-          <label class="user" for="login-username"><span class="hidden">Username</span></label>
-          <input name = 'ten' id="login-username" type="text" class="form-input" placeholder="Nhập Họ Tên" required>
+            <label class="user" for="login-username" class="hidden">Username</label>
+            <input type="text" class="form-input" name="hoten" placeholder="Nhập họ tên" id="nameInput">
+            <small id="nameError" style="color: red;"></small>
         </div>
 
         <div class="form-field">
-          <label class="lock" for="login-password"><span class="hidden">Password</span></label>
-          <input name = 'matKhau' id="login-password" type="password" class="form-input" placeholder="Nhập Password" required>
+            <label class="password" for="login-username" class="hidden">Password</label>
+            <input type="text" class="form-input" name="matkhau" placeholder="Nhập Password" id="passwordInput">
+            <small id="passwordError" style="color: red;"></small>
         </div>
 
-        <div class="form-field">
-          <input type="submit" name = 'submit' value="Log in">
+        <div class="hihi">
+            <input type="submit" name="submit" value="Login">
         </div>
-      </form>
-    </div>
+    </form>
+</div>
+<script>
+    function validateForm() {
+        var nameInput = document.getElementById("nameInput");
+        var passwordInput = document.getElementById("passwordInput");
+        
+        var nameError = document.getElementById("nameError");
+        var passwordError = document.getElementById("passwordError");
+        
+        var isValid = true;
+
+        if (nameInput.value.trim() === "") {
+            nameError.innerHTML = "Vui lòng điền vào họ tên.";
+            isValid = false;
+        } else {
+            nameError.innerHTML = "";
+        }
+
+        if (passwordInput.value.trim() === "") {
+            passwordError.innerHTML = "Vui lòng điền vào password.";
+            isValid = false;
+        } else {
+            passwordError.innerHTML = "";
+        }
+
+        return isValid;
+    }
+</script>
+
+</div>
+   
+
+
+
+
+
+
 
     <?
       class  connect {
@@ -208,8 +255,8 @@ input {
 
   <?
     if (isset ($_POST ['submit'])) {
-      $username = $_POST ['ten'] ;
-      $password = $_POST ['matKhau'] ;
+      $username = $_POST ['hoten'] ;
+      $password = $_POST ['matkhau'] ;
       $user = new user_pdo () ;
       $checkUser = $user -> getList ($password , $username) ;
       foreach ($checkUser as $checkUser) {
@@ -227,5 +274,8 @@ input {
 <?
   ob_end_flush () ;
 ?>
+
+
+
 
 

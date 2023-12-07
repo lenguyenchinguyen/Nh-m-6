@@ -24,17 +24,17 @@
 </style>
 <div class="row">
     <div class="row2 font_title">
-        <h1>DANH SÁCH LOẠI HÀNG HÓA</h1>
+        <center><h1>DANH SÁCH LOẠI HÀNG HÓA</h1></center>
     </div>
     <div class="row form_content">
         <form action="#" method="POST">
             <div class="row mb10 formds_loai">
                 <table class="table table-head-fixed text-nowrap">
                     <tr>
-                       
+
                         <th>Mã loại</th>
                         <th>Tên loại</th>
-                       
+
                         <th>Hành động</th>
                     </tr>
                     <?php
@@ -42,13 +42,13 @@
                         $deleteCategory = '/admin/index.php?act=delete-category&id=' . $value['id'];
                         $editCategory = '/admin/index.php?act=edit-category&id=' . $value['id'];
                     ?>
-                         
-                            <td><?php echo $value['id'] ?></td>
-                            <td><?php echo $value['name'] ?></td>
-                            <td>
-                                <a href="<?php echo $editCategory ?>"><input class="btn btn-primary" type="button" value="Sửa" /></a>
-                                <a href="<?php echo $deleteCategory ?>" onclick="return confirmDelete()"><input class="btn btn-danger" type="button" value="Xóa" /></a>
-                            </td>
+
+                        <td><?php echo $value['id'] ?></td>
+                        <td><?php echo $value['name'] ?></td>
+                        <td>
+                            <a href="<?php echo $editCategory ?>"><input class="btn btn-primary" type="button" value="Sửa" /></a>
+                            <a href="<?php echo $deleteCategory ?>" onclick="return confirmDelete()"><input class="btn btn-danger" type="button" value="Xóa" /></a>
+                        </td>
                         </tr>
                     <?php
                     }

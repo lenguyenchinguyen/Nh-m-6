@@ -3,7 +3,7 @@ if (is_array($result)) {
     extract($result);
 }
 ?>
-<h1>CẬP NHẬT LOẠI</h1>
+<center><h1>CẬP NHẬT LOẠI</h1></center>
 <form action="index.php?act=update-category" method="POST">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Mã loại</label>
