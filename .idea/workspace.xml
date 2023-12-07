@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59a912cf-00b9-4803-a6f3-44e3fcbf1ff6" name="Changes" comment="file deleted" />
+    <list default="true" id="59a912cf-00b9-4803-a6f3-44e3fcbf1ff6" name="Changes" comment="bill + binh luan + san pham + thong ke">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_13_2023_8_55_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_13_2023_8_55_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_15_2023_8_42_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_15_2023_8_42_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_18_2023_3_39_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_18_2023_3_39_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_11_28_2023_3_46_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_11_28_2023_3_46_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="nguyenlncpc05635" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,7 +68,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/DAM 1/nhom6&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/DAM 1/nhom6/admin&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -74,6 +80,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\DAM 1\nhom6\admin" />
       <recent name="D:\DAM 1\nhom6" />
       <recent name="D:\DAM 1\nhom6\admin\assets\dist\img" />
     </key>
@@ -101,6 +108,7 @@
       <workItem from="1700295612997" duration="3561000" />
       <workItem from="1700818615716" duration="886000" />
       <workItem from="1701160569525" duration="1050000" />
+      <workItem from="1701424890000" duration="78000" />
     </task>
     <task id="LOCAL-00001" summary="N6-03:trang quen mat khau">
       <option name="closed" value="true" />
@@ -182,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701161618830</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="bill + binh luan + san pham + thong ke">
+      <option name="closed" value="true" />
+      <created>1701168184139</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701168184139</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +257,7 @@
     <MESSAGE value="sidebar sua lai" />
     <MESSAGE value="module sua ly code" />
     <MESSAGE value="file deleted" />
-    <option name="LAST_COMMIT_MESSAGE" value="file deleted" />
+    <MESSAGE value="bill + binh luan + san pham + thong ke" />
+    <option name="LAST_COMMIT_MESSAGE" value="bill + binh luan + san pham + thong ke" />
   </component>
 </project>
