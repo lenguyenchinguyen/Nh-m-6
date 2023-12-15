@@ -9,14 +9,14 @@ if (isset ($_POST ['addcart'])) {
     $name = $_POST ['name'] ;
     $img = $_POST ['img'] ;
     $price = $_POST ['price'] ;
-     
+
     $qty = 1 ;
     $product = [
         'id' => $id ,
         'name' => $name ,
         'img' => $img ,
-        'price' => $price ,        
-        'qty' => $qty 
+        'price' => $price ,
+        'qty' => $qty
     ] ;
     $found = false ;
     if (isset ($_SESSION['cart'])) {

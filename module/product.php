@@ -77,9 +77,7 @@ class Product
     }
     function insertComment($content, $idUser, $idPro)
     {
-        date_default_timezone_set("Asia/Ho_Chi_Minh");
-        $time = date('H:i:s d/m/Y');
-        $sql = "INSERT BINHLUAN VALUES(NULL, '$content', $idUser, $idPro, '$time')";
+        $sql = "INSERT BINHLUAN (noidung,iduser,idpro) VALUES('$content', $idUser, $idPro )";
         pdo_execute($sql);
     }
     function searchProduct($value)
@@ -87,6 +85,13 @@ class Product
         $sql = "SELECT * FROM SANPHAM WHERE NAME LIKE '%$value%'";
         return  pdo_query($sql);
     }
+
+
+
+
+
+
+
 }
 
 $ProductService = new Product();

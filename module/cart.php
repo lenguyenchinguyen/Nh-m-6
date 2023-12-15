@@ -1,15 +1,15 @@
 <?php
 class ServiceCart
 {
-    function insertBill($idUser, $name, $address, $tel, $email, $payment, $total)
+    function insertBill($user_id, $user_name, $user_email, $user_phone, $user_address, $total_bill, $httt_ma)
     {
-        $time = date('d/m/Y');
-        $sql = "INSERT INTO cthoadon VALUES(NULL, '$name', '$address', '$tel', '$email', $payment, '$time', $total, 0, $idUser)";
+        $sql = "INSERT INTO hoadon (user_id, user_name, user_email, user_phone, user_address, order_total, order_payment) VALUES ('$user_id', '$user_name', 
+        '$user_email', '$user_phone', '$user_address', '$total_bill', '$httt_ma')";
         return pdo_execute_last_result($sql);
     }
-    function insertCart($idUser, $img, $name, $price, $soluong, $idBill)
+    function insertCart($product_id, $bill_id, $qty, $total_product)
     {
-        $sql = "INSERT hoadon VALUES(NULL, $idUser, '$img', '$name', $price, $soluong, $idBill)";
+        $sql = "INSERT cthoadon (product_id, bill_id, qty, total_product) VALUES ('$product_id', '$bill_id', '$qty', '$total_product')";
         pdo_execute($sql);
     }
 
@@ -27,10 +27,9 @@ class ServiceCart
         }
     }
 
-
     function queryCart($id)
     {
-        $sql = "SELECT * FROM hoadon WHERE idbill = $id";
+        $sql = "SELECT * FROM hoadon WHERE bill_id = $id";
         return pdo_query($sql);
     }
 

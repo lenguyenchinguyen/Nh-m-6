@@ -42,7 +42,7 @@
                     <?php
                     foreach ($listComment as $key => $value) {
                         $deleteComment = "index.php?act=delete-comment&id=" . $value['id'];
-                    ?>
+                        ?>
                         <tr>
                             <td><input type="checkbox" name="" id="" /></td>
                             <td><?php echo $value['id'] ?></td>
@@ -51,11 +51,11 @@
                             <td><?php echo $value['idpro'] ?></td>
                             <td><?php echo $value['ngaybinhluan'] ?></td>
                             <td>
-                                <a href=""><input type="button"class="btn btn-primary" value="Sửa" /></a>
+                                <!-- <a href=""><input type="button"class="btn btn-primary" value="Sửa" /></a> -->
                                 <a href="#" onclick="confirmDelete('<?= $deleteComment ?>'); return false;"><input type="button"class="btn btn-danger" value="Xóa" /></a>
                             </td>
                         </tr>
-                    <?php
+                        <?php
                     }
                     ?>
                 </table>
