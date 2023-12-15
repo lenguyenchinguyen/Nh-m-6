@@ -1,41 +1,41 @@
-<?php   
-session_start () ;
+<?php
+session_start();
 include_once('../module/pdo.php');
 include_once('../module/category.php');
 include_once('../module/auth.php');
 include_once('../module/cart.php');
 include_once('../module/product.php');
 include_once('../module/user.php');
-if (isset ($_SESSION ['id']) && !isset ($_GET ['act'])) {
+if (isset($_SESSION['id']) && !isset($_GET['act'])) {
     include_once('./header.php');
 }
 
 
-if (isset ($_SESSION ['id']) && isset ($_GET ['act'])) {
-    include_once ('./header_slide.php') ;
+if (isset($_SESSION['id']) && isset($_GET['act'])) {
+    include_once('./header_slide.php');
 }
 
-$act = 'home' ;
+$act = 'home';
 
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
 }
 
-if (!isset ($_SESSION ['id'])) {
-    $act = 'login' ;
-} 
+if (!isset($_SESSION['id'])) {
+    $act = 'login';
+}
 
 switch ($act) {
     case "home":
-        include_once ('./home.php') ; 
-    break;
-    case "login" :
-        include "Login/login.php" ;
-    break ;
-    case "logaut" :
-        unset ($_SESSION ['id']) ;
-        header ("Location: index.php") ;
-    break ;
+        include_once('./home.php');
+        break;
+    case "login":
+        include "Login/login.php";
+        break;
+    case "logaut":
+        unset($_SESSION['id']);
+        header("Location: index.php");
+        break;
 }
 
 if (isset($_GET['act'])) {
@@ -172,15 +172,12 @@ if (isset($_GET['act'])) {
             $listComment = $ProductService->selectCommentAll();
             include_once('./binhluan/index.php');
             break;
+
         case "list-bill":
-            if (isset($_POST['btn-search-bill'])) {
-                $id = $_POST['search-bill'];
-                $listBill = $serviceCart->queryBill($id, 'array');
-                include_once('./bill/index.php');
-            } else {
-                $listBill = $serviceCart->queryBill();
-                include_once('./bill/index.php');
-            }
+            include_once "./bill/index.php";
+            break;
+        case "view-bill":
+            include_once "./bill/view.php";
             break;
         case "delete-bill":
             if (isset($_GET['id'])) {
@@ -213,13 +210,11 @@ if (isset($_GET['act'])) {
         default:
             include_once('./home.php');
             break;
-
     }
 }
 // else {
 //     include_once('./home.php');
 // }
-if (isset ($_SESSION ['id'])) {
+if (isset($_SESSION['id'])) {
     include_once('./footer.php');
 }
-
