@@ -27,6 +27,7 @@ class ServiceCart
         }
     }
 
+
     function queryCart($id)
     {
         $sql = "SELECT * FROM hoadon WHERE idbill = $id";

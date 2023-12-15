@@ -23,10 +23,10 @@
     }
 </style>
 <div class="row">
-    <div class="card">
+    <div class="card" style="padding:2%;">
         <div class="row font_title">
-            <h4>DANH SÁCH LOẠI HÀNG HÓA</h4>
-        </div>
+            <center><h4>DANH SÁCH  HÀNG HÓA</h4></center>
+        </div><br>
         <div class="row form_content">
             <form action="#" method="POST">
                 <div class="form formds_loai">

@@ -1,5 +1,5 @@
-<div class="card">
-    <h4>THÊM MỚI SẢN PHẨM</h4>
+<div class="card" style="padding:4%;">
+    <center><h4>THÊM MỚI SẢN PHẨM</h4></center>
     <form action="index.php?act=add-product" method="POST" enctype="multipart/form-data"
         onsubmit="return validateForm()">
         <!-- <div class="mb-3">

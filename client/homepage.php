@@ -1,15 +1,39 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="CodePixar">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title --
+	<title>Karma Shop</title>
+
+	<--CSS ============================================= -->
 	<link rel="stylesheet" href="/client/css/linearicons.css">
-	<link rel="stylesheet" href="/client/css/font-awesome.min.css">
-	<link rel="stylesheet" href="/client/css/themify-icons.css">
-	<link rel="stylesheet" href="/client/css/bootstrap.css">
 	<link rel="stylesheet" href="/client/css/owl.carousel.css">
+	<link rel="stylesheet" href="/client/css/themify-icons.css">
 	<link rel="stylesheet" href="/client/css/nice-select.css">
 	<link rel="stylesheet" href="/client/css/nouislider.min.css">
-	<link rel="stylesheet" href="/client/css/ion.rangeSlider.css" />
-	<link rel="stylesheet" href="/client/css/ion.rangeSlider.skinFlat.css" />
-	<link rel="stylesheet" href="/client/css/magnific-popup.css">
+	<link rel="stylesheet" href="/client/css/bootstrap.css">
 	<link rel="stylesheet" href="/client/css/main.css">
-	
+</head>
+
+<body>
+    <!-- Start Header Area -->
+    <?php 
+        include "header.php";
+    ?>
+	<!-- End Header Area -->
+
 	<!-- start banner Area -->
 	<section class="banner-area">
 	    <div class="container">
@@ -21,18 +45,11 @@
 	                        <div class="col-lg-5 col-md-6">
 	                            <div class="banner-content">
 	                                <h1>Nike New <br>Collection!</h1>
-<<<<<<< HEAD
-	                                <p>Ở đây chúng tôi không chỉ có giày mà còn có sự tận tâm.</p>
-	                                <div class="add-bag d-flex align-items-center">
-	                                    <a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
-	                                    <span class="add-text text-uppercase">Mua ngay!</span>
-=======
 	                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
 	                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
 	                                <div class="add-bag d-flex align-items-center">
 	                                    <a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
-	                                    <span class="add-text text-uppercase">Add to Bag</span>
->>>>>>> luongvhpc05477
+	                                    <span class="add-text text-uppercase">Add to Bag</span>										
 	                                </div>
 	                            </div>
 	                        </div>
@@ -42,9 +59,10 @@
 	                            </div>
 	                        </div>
 	                    </div>
+						
 	                    <!-- single-slide -->
-	                    <div class="row single-slide">
-	                        <div class="col-lg-5">
+						<div class="row single-slide align-items-center d-flex">
+	                        <div class="col-lg-5 col-md-6">
 	                            <div class="banner-content">
 	                                <h1>Nike New <br>Collection!</h1>
 	                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
@@ -55,8 +73,8 @@
 	                                </div>
 	                            </div>
 	                        </div>
-	                        <div class="col-lg-7">
-	                            <div class="/client/banner-img">
+	                        <div class="col-lg-7"> 
+	                            <div class="banner-img">
 	                                <img class="img-fluid" src="/client/img/banner/banner-img.png" alt="">
 	                            </div>
 	                        </div>
@@ -194,13 +212,9 @@
 	                <div class="col-lg-6 text-center">
 	                    <div class="section-title">
 	                        <h1>Sản phẩm mới nhất</h1>
-<<<<<<< HEAD
-	                        <p>Tổng hợp các sản phẩm hot từ nhà sản xuất.</p>
-=======
 	                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
 	                            dolore
 	                            magna aliqua.</p>
->>>>>>> luongvhpc05477
 	                    </div>
 	                </div>
 	            </div>
@@ -836,11 +850,7 @@
 	<!-- Start related-product Area -->
 	<br>
 	<br>
-<<<<<<< HEAD
-	<!-- <section class="related-product-area section_gap_bottom">
-=======
 	<section class="related-product-area section_gap_bottom">
->>>>>>> luongvhpc05477
 	    <div class="container">
 	        <div class="row justify-content-center">
 	            <div class="col-lg-6 text-center">
@@ -973,25 +983,16 @@
 	            </div>
 	        </div>
 	    </div>
-<<<<<<< HEAD
-	</section> -->
-=======
 	</section>
->>>>>>> luongvhpc05477
-	<!-- End related-product Area -->
-	<script src="./client/js/vendor/jquery-2.2.4.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-	 crossorigin="anonymous"></script>
-	<script src="./client/js/vendor/bootstrap.min.js"></script>
-	<script src="./client/js/jquery.ajaxchimp.min.js"></script>
-	<script src="./client/js/jquery.nice-select.min.js"></script>
-	<script src="./client/js/jquery.sticky.js"></script>
-	<script src="./client/js/nouislider.min.js"></script>
-	<script src="./client/js/countdown.js"></script>
-	<script src="./client/js/jquery.magnific-popup.min.js"></script>
-	<script src="./client/js/owl.carousel.min.js"></script>
-	<!--gmaps Js-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-	<script src="./client/js/gmaps.min.js"></script>
-	<script src="./client/js/main.js"></script>
+	<?php
+			include 'client/footer.php';
+	?>
+
+	<!-- End related-product Area -->   
+</body>
+</html>
+	
+	
+	
+	
     

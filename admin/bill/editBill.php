@@ -1,6 +1,6 @@
 <div class="row2">
     <div class="row2 font_title">
-        <h1>Chỉnh sửa đơn hàng</h1>
+        <center><h1>Chỉnh sửa đơn hàng</h1></center>
     </div>
     <div class="row2 form_content" style="margin: 10px 0; float: left;">
         <form action="/admin/index.php?act=update-bill" method="POST">

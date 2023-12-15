@@ -1,39 +1,27 @@
 <?php
 
-function getAllProduct(){
-    global $connection;
-    $data = [];
-    $query = "SELECT * FROM products";
+// require_once '../../module/pdo.php';
 
-    $result = mysqli_query($connection, $query);
-
-   if(mysqli_num_rows($result)>0){
-        $data = $result ->fetch_all(MYSQLI_ASSOC);
-   }
-     return $data;
+function getAllProduct()
+{
+     $query = "SELECT * FROM sanpham";
+     pdo_query($query);
+     return  pdo_query($query);
 }
 
+function getProductCategory ($idDanhMuc)
+{
+     $query = "SELECT * FROM sanpham WHERE iddm = '$idDanhMuc'" ;
+     pdo_query($query);
+     return  pdo_query($query);
+}
 
-
-function getOneProduct($id){
-     global $connection;
-     $data = [];
-//      // lab 7
-     $query = "SELECT * FROM products WHERE `id` = $id";
-//      // LAB 8
-//      // $query = "SELECT * FROM table WHERE `id` = ?";
-//      // $stmt = mysqli_prepare($connection, $query);
-//      // mysqli_stmt_bind_param($stmt,"i",$id);
-//      // mysqli_stmt_execute($stmt);
-//      // mysqli_stmt_bind_result($stmt,$result);
-     
-     $result = mysqli_query($connection, $query);
- 
-    if(mysqli_num_rows($result)>0){
-         $data = $result ->fetch_assoc();
-    }
-      return $data;
- }
+function getOneProduct($id)
+{
+     $query = "SELECT name AS tenSanPham , price AS giaSanPham ,id as id , mota as mota, img as img  FROM sanpham WHERE `id` = $id";
+     pdo_query($query);
+     return  pdo_query_one($query);
+}
 
 
 
@@ -43,17 +31,9 @@ function getOneProduct($id){
 //  * Lấy sản phẩm bằng danh 
 //  * @return array
 //  */
-function getAllProductCategories(){
-    global $connection;
-    $data = [];
-    $query = "SELECT * FROM product_categories";
+function getAllProductCategories()
+{
 
-    $result = mysqli_query($connection, $query);
-
-   if(mysqli_num_rows($result)>0){
-        $data = $result ->fetch_all(MYSQLI_ASSOC);
-   }
-     return $data;
 }
 
 
@@ -64,206 +44,82 @@ function getAllProductCategories(){
 //  * @param mixed $category_id
 //  * @return array
 //  */
-function getProductByCategory($category_id){
-    global $connection;
-    $data = [];
-    $query = "SELECT * FROM products WHERE product_category_id = $category_id";
+function getProductByCategory($category_id)
+{
 
-    $result = mysqli_query($connection, $query);
-    
-   if(mysqli_num_rows($result)>0){
-     $data = $result ->fetch_all(MYSQLI_ASSOC);
-   }
-   return $data;
 }
 
 
 
 
 
-function createProduct( $name,
-                        $slug ='',
-                        $thumbnail,
-                        $price,
-                        $sale_price,
-                        $product_category_id,
-                        $content
-                    ){
-                    global $connection;
-    
-    $query = "INSERT INTO products (   
-                        name,  
-                        slug ,
-                        thumbnail,
+function createProduct(
+     $name,
+     $price,
+     $img,
+     $mota,
+     $luotxem,
+     $iddm
+
+) {
+     global $connection;
+
+     $query = "INSERT INTO sanpham (   
+                        name,                         
                         price,
-                        sale_price,
-                        content,
-                        product_category_id
+                        img,
+                        mota,
+                        luotxem,
+                        iddm
                         ) 
             VALUES (
-                        '$name',
-                        '$slug',
-                        '$thumbnail',
-                        '$price',
-                        '$sale_price',
-                        '$content',
-                        '$product_category_id'
-                    )";
-
-            mysqli_query($connection,$query);
-           
-}
-
-
-function updateProduct( $name,
-                        $slug ='',
-                        $thumbnail,
-                        $price,
-                        $sale_price,
-                        $product_category_id,
-                        $content,
-                        $id
-                    ){
-                    global $connection;
-                    $query = "UPDATE products SET 
-                    `name`='$name',
-                    `thumbnail`='$thumbnail',
-                    `price`='$price',
-                    `sale_price`='$sale_price',
-                    `content`='$content',
-                    `product_category_id`='$product_category_id',
-                    `content` = '$content'
-                    WHERE `id` =$id 
-                    ";
-                    // echo $query;
-                    mysqli_query($connection, $query);
-
-    $query = "INSERT INTO products   
-                        name,  
-                        slug ,
-                        thumnail,
-                        price,
-                        sale_price,
-                        content,
-                        product_category_id
-                        ) 
-            VALUES (
-                        'name',
-                        'slug'',
-                        'thumnail',
+                        'name',                         
                         'price',
-                        'sale_price',
-                        'content',
-                        '$product_category_id'
+                        'img',
+                        'mota',
+                        'luotxem',
+                        'iddm'
                     )";
 
-            mysqli_query($connection,$query);
+    
 }
 
 
+function updateProduct(
+     $name,
+     $price,
+     $img,
+     $mota,
+     $luotxem,
+     $iddm
+) {
+     global $connection;
+     $query = "UPDATE sanpham SET 
+                    `name`='$name',            
+                    `price`='$price',
+                    `img`='$img',
+                    `mota`='$mota',
+                    `luotxem` = '$luotxem'
+                    WHERE `iddm` =$iddm 
+                    ";
 
 
+     $query = "INSERT INTO sanpham  
+                        name,                         
+                        price,
+                        img,
+                        mota,
+                        luotxem,
+                        iddm
+                        ) 
+            VALUES (
+               'name',                         
+                        'price',
+                        'img',
+                        'mota',
+                        'luotxem',
+                        'iddm'
+                    )";
 
+}
 
-
-// Lab 8
-// function getOneProduct($id){
-//      global $connection;
-//      $data = [];
-//      // $query = "SELECT * FROM products WHERE `id` = $id";
-//      $query = "SELECT * FROM table WHERE `id` = ?";
-//      $stmt = mysqli_prepare($connection, $query);
-//      mysqli_stmt_bind_param($stmt,"i",$id);
-//      mysqli_stmt_execute($stmt);
-//      mysqli_stmt_bind_result($stmt,$result);
-     
-//      $result = mysqli_query($connection, $query);
-//      $data = mysqli_fetch_assoc($result);
-//     if(mysqli_num_rows($result)>0){
-//          $data = $result ->fetch_assoc();
-//     }
-//       return $data;
-//  }
-
-// function createProduct( 
-//                $name,
-//                $slug ='',
-//                $thumbnail,
-//                $price,
-//                $sale_price,
-//                $product_category_id,
-//                $content
-// ){
-//                global $connection;
-
-// $query = "INSERT INTO products (   
-//                     name,  
-//                     slug ,
-//                     thumbnail,
-//                     price,
-//                     sale_price,
-//                     content,
-//                     product_category_id
-//                     ) 
-//                     VALUES (
-//                     '?',
-//                     '?',
-//                     '?',
-//                     '?',
-//                     '?',
-//                     '?',
-//                     '?'
-//                     )";
-//           $stmt = mysqli_prepare($connection, $query);
-//           mysqli_stmt_bind_param($stmt, "sssiisi", $name, $slug, $thumbnail, $price, $sale_price,
-//           $product_category_id, $content);
-
-//      return mysqli_stmt_execute($stmt);
-
-
-// function updateProduct( $name,
-//                         $slug ='',
-//                         $thumbnail,
-//                         $price,
-//                         $sale_price,
-//                         $product_category_id,
-//                         $content,
-//                         $id
-//                     ){
-//                     global $connection;
-//                     $query = "UPDATE products SET 
-//                     `name`='$name',
-//                     `thumbnail`='$thumbnail',
-//                     `price`='$price',
-//                     `sale_price`='$sale_price',
-//                     `content`='$content',
-//                     `product_category_id`='$product_category_id',
-//                     `content` = '$content'
-//                     WHERE `id` =$id 
-//                     ";
-//                     // echo $query;
-//                     mysqli_query($connection, $query);
-
-//     $query = "INSERT INTO products   
-//                         name,  
-//                         slug ,
-//                         thumnail,
-//                         price,
-//                         sale_price,
-//                         content,
-//                         product_category_id
-//                         ) 
-//             VALUES (
-//                         'name',
-//                         'slug'',
-//                         'thumnail',
-//                         'price',
-//                         'sale_price',
-//                         'content',
-//                         '$product_category_id'
-//                     )";
-
-//             mysqli_query($connection,$query);
-// }
-// }
-?>
